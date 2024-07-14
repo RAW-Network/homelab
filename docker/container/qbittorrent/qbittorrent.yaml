@@ -1,0 +1,20 @@
+name: qbittorrent
+services:
+  qbittorrent:
+    image: hotio/qbittorrent:release-4.6.5
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Makassar
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - /DATA/AppData/qbittorrent/appdata:/config
+      - /DATA/downloads:/downloads
+      - /DATA/AppData/qbittorrent/vuetorrent:/vuetorrent
+    ports:
+      - 2000:8080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped
