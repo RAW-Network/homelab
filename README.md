@@ -27,7 +27,7 @@ There are many great container for docker so amazing that it'll be the last one 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
 * You should implement DRY principles to the rest of your life :smile:
-* * You shouldn't be doing the same tasks over
+* You shouldn't be doing the same tasks over
 
 
 <!-- GETTING STARTED -->
