@@ -1,0 +1,7 @@
+name: openspeedtest
+services:
+  app:
+    image: openspeedtest/latest
+    ports:
+      - 1000:3000
+    restart: unless-stopped
