@@ -1,0 +1,13 @@
+name: glances
+services:
+  glances:
+    container_name: glances
+    image: nicolargo/glances:4.1.2.1-full
+    ports:
+      - 8000:61208
+    environment:
+      - TZ=Asia/Makassar
+      - GLANCES_OPT=-w
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: unless-stopped

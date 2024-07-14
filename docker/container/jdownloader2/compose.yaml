@@ -1,0 +1,20 @@
+name: jdownloader2
+services:
+  app:
+    image: jlesage/jdownloader-2:latest
+    ports:
+      - '5000:5800'
+      - '5900:5900'
+      - '3219:3219'
+    environment:
+      - TZ=Asia/Makassar
+      - GROUP_ID=1000
+      - USER_ID=1000
+      - JDOWNLOADER_HEADLESS=
+      - MYJDOWNLOADER_DEVICE_NAME=
+      - MYJDOWNLOADER_EMAIL=
+      - MYJDOWNLOADER_PASSWORD=
+    volumes:
+      - '/DATA/AppData/jdownloader2/config:/config'
+      - '/DATA/Downloads:/output'
+    restart: unless-stopped
