@@ -1,10 +1,12 @@
-name: pingvin-share
 services:
-  app:
+  pingvin-share:
     image: stonith404/pingvin-share:latest
+    container_name: pingvin-share
     ports:
-      - 8090:3000
+      - 8099:3000
     volumes:
-      - '/DATA/AppData/pingvin-share/data:/opt/app/backend/data'
-      - '/DATA/AppData/pingvin-share/images:/opt/app/frontend/public/img'
+      - /DATA/AppData/pingvin-share/data:/opt/app/backend/data
+      - /DATA/AppData/pingvin-share/images:/opt/app/frontend/public/img
+    environment:
+      - TZ=Asia/Makassar
     restart: unless-stopped
