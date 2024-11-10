@@ -1,0 +1,12 @@
+services:
+  gokapi:
+    container_name: gokapi
+    image: f0rc3/gokapi:latest
+    restart: unless-stopped
+    ports:
+      - 53842:53842
+    volumes:
+      - /DATA/AppData/gokapi/data:/app/data
+      - /DATA/AppData/gokapi/config:/app/config
+    environment:
+      - TZ=Asia/Makassar
