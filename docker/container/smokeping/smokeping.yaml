@@ -11,5 +11,5 @@ services:
       - /DATA/AppData/smokeping/config:/config
       - /DATA/AppData/smokeping/data:/data
     ports:
-      - 4000:80
+      - 3080:80
     restart: unless-stopped
