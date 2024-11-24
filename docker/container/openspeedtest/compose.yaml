@@ -1,7 +1,7 @@
 services:
-  openspeedtest:
-    container_name: openspeedtest
-    image: openspeedtest/latest
-    restart: unless-stopped
-    ports:
-      - 8083:3000
+    speedtest:
+       restart: unless-stopped
+       container_name: openspeedtest
+       image: openspeedtest/latest
+       ports:
+        - 3005:3000
