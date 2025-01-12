@@ -1,6 +1,5 @@
-name: portainer
 services:
-  app:
+  portainer:
     container_name: portainer
     image: portainer/portainer-ce:latest
     ports:
