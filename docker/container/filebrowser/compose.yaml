@@ -6,7 +6,7 @@ services:
     volumes:
       - /DATA:/srv
       - /DATA/AppData/filebrowser/filebrowser.db:/database/filebrowser.db
-      - /DATA/AppData/filebrowser/filebrowser/settings.json:/config/settings.json
+      - /DATA/AppData/filebrowser/settings.json:/config/settings.json
     environment:
       - PUID=1000
       - PGID=1000
