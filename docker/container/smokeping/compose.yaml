@@ -1,4 +1,3 @@
-name: smokeping
 services:
   smokeping:
     image: lscr.io/linuxserver/smokeping:latest
@@ -11,5 +10,5 @@ services:
       - /DATA/AppData/smokeping/config:/config
       - /DATA/AppData/smokeping/data:/data
     ports:
-      - 3080:80
+      - 3088:80
     restart: unless-stopped
