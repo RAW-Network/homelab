@@ -19,8 +19,8 @@ services:
       - --entrypoints.websecure.asdefault=true
       - --entrypoints.websecure.http.tls=true
       - --entrypoints.websecure.http.tls.certresolver=letsencrypt
-      - --entrypoints.websecure.http.tls.domains.main= #domain.com
-      - --entrypoints.websecure.http.tls.domains.sans= #*.domain.com
+      - --entrypoints.websecure.http.tls.domains[0].main= #domain.com
+      - --entrypoints.websecure.http.tls.domains[0].sans= #*.domain.com
       - --certificatesresolvers.letsencrypt.acme.email= #email@example.com
       - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
       - --certificatesresolvers.letsencrypt.acme.dnschallenge=true
