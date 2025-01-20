@@ -5,12 +5,3 @@ http:
         average: 600
         burst: 100
         period: 1m
-
-    public-rate-limit:
-      rateLimit:
-        average: 600
-        burst: 100
-        period: 1m
-        sourceCriterion:
-          ipStrategy:
-            depth: 1
