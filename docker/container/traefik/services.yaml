@@ -1,0 +1,20 @@
+http:
+  routers:
+    proxmox:
+      rule: Host(`proxmox.mydomain.com`)
+      service: iconnet-router
+
+    mikrotik-router:
+      rule: Host(`mikrotik.mydomain.com`)
+      service: mikrotik-router
+
+  services:
+    proxmox:
+      loadBalancer:
+        servers:
+          - url: http://192.168.100.:8006
+
+    mikrotik-router:
+      loadBalancer:
+        servers:
+          - url: http://192.168.100.1:80
