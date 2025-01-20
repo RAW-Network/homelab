@@ -37,7 +37,7 @@ services:
       - /DATA/AppData/traefik/letsencrypt:/letsencrypt
       - /DATA/AppData/traefik/config:/config
     environment:
-      - AUTH_USERS= #username:password
+      - AUTH_USERS= #username:hash_password
       - CF_DNS_API_TOKEN= #CF_DNS_Zone Api Token
     labels:
       - traefik.enable=true
