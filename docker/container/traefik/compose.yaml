@@ -37,13 +37,11 @@ services:
       - /DATA/AppData/traefik/letsencrypt:/letsencrypt
       - /DATA/AppData/traefik/config:/config
     environment:
-      - AUTH_USERS=${AUTH_USERS}
+      - AUTH_USERS= #username:password
       - CF_DNS_API_TOKEN= #CF_DNS_Zone Api Token
     labels:
-      - traefik.enable=${TRAEFIK_ENABLED:-false}'
-      - traefik.http.routers.traefik.rule=Host(`traefik.${SECONDARY_MAIN_DOMAIN}`)'
-      - traefik.http.routers.traefik.service=api@internal'
-      - traefik.http.routers.traefik.middlewares=internal-ip-allowlist@file,basic-auth@file'
+      - traefik.enable=true
+      - traefik.http.routers.traefik.rule=Host(`traefik.yourdomain.com`)
 
 networks:
   default:
