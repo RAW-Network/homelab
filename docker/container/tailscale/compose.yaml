@@ -10,4 +10,4 @@ services:
       - TS_EXTRA_ARGS=--advertise-exit-node --accept-routes
       - TS_STATE_DIR=/var/lib/tailscale
     volumes:
-      - tailscale-data:/var/lib/tailscale
+      - /DATA/AppData/tailscale/data:/var/lib/tailscale
