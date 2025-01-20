@@ -14,10 +14,3 @@ http:
         sourceCriterion:
           ipStrategy:
             depth: 1
-
-    basic-auth:
-      basicAuth:
-        users:
-          {{- range (splitList "," (username:hash_password)) }}
-           - "{{ . }}"
-          {{- end }}
