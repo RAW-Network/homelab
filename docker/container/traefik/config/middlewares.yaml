@@ -5,3 +5,24 @@ http:
         average: 600
         burst: 100
         period: 1m
+
+    public-rate-limit:
+      rateLimit:
+        average: 600
+        burst: 100
+        period: 1m
+        sourceCriterion:
+          ipStrategy:
+            depth: 1
+
+    basic-auth:
+      basicAuth:
+        users:
+          - "username:hash_password" 
+          - "username2:hash_password2"
+
+    ip-allowlist:
+      ipAllowlist:
+        sourceRange:
+          - "127.0.0.1/32"
+          - "192.168.100.5"
