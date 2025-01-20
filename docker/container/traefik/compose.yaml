@@ -42,6 +42,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.traefik.rule=Host(`traefik.yourdomain.com`)
+      - traefik.http.routers.traefik.service=api@internal
 
 networks:
   default:
