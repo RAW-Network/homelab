@@ -54,7 +54,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-RAW-Network - [@rawnetwork](https://homelab/rawmetwork.id) - kem@rawnetwork.id
+RAW-Network - [@rawnetwork](https://github.com/RAW-Network/homelab) - kem@rawnetwork.my.id
 
 Project Link: [https://github.com/RAW-Network/homelab](https://github.com/RAW-Network/homelab.git)
 
