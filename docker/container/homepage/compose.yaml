@@ -7,5 +7,5 @@ services:
     volumes:
       - /DATA/AppData/homepage/config:/app/config
       - /DATA/AppData/homepage/images:/app/public/images
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     restart: unless-stopped
