@@ -4,8 +4,8 @@ services:
     container_name: sambashare
     environment:
       - NAME=sambashare
-      - USER=homelab
-      - PASS=admin132109bali
+      - USER=username
+      - PASS=password
       - UID=1000
       - GID=1000
     ports:
