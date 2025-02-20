@@ -8,4 +8,4 @@ services:
       - 3008:8080
     extra_hosts:
       - host.docker.internal:host-gateway
-    restart: unless-stopped
+    restart: always
