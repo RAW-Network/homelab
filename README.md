@@ -1,7 +1,5 @@
 # RAW-Network Docker Compose Collection
 
-![Logo RAW-Network](https://share.rawnetwork.my.id/img/logo.png)
-
 👋 Selamat Datang di Kumpulan Docker Compose RAW-Network!
 
 Kumpulan Docker Compose dan konfigurasi yang siap pakai untuk mempermudah Anda dalam memulai project Docker. Dibuat khusus untuk pemula yang baru belajar Docker, dengan config yang sudah teruji dan mudah diardown.
@@ -20,9 +18,5 @@ Kumpulan Docker Compose dan konfigurasi yang siap pakai untuk mempermudah Anda d
 
 ## 🚀 Getting Started
 
-1. **Install Docker**  
+**Install Docker**  
    Pastikan Docker sudah terinstall di mesin Anda. [Download Docker](https://www.docker.com/get-docker)
-
-2. **Clone Repo Ini**  
-   ```bash
-   git clone https://github.com/raw-network/docker-compose-collection.git
