@@ -1,0 +1,17 @@
+services:
+  fireshare:
+    container_name: fireshare
+    image: shaneisrael/fireshare:latest
+    ports:
+      - 8008:80
+    volumes:
+      - /DATA/AppData/fireshare/fireshare_data:/data
+      - /DATA/AppData/fireshare/fireshare_processed:/processed
+      - /DATA/AppData/fireshare/fireshare_videos:/videos
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      - SECRET_KEY=fireclipsnetworkawhare
+      - MINUTES_BETWEEN_VIDEO_SCANS=1
+      - PUID=1000 
+      - PGID=1000
