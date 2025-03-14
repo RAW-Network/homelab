@@ -1,0 +1,10 @@
+services:
+    caddy:
+      image: caddy:latest
+      container_name: caddy
+      ports:
+        - 8088:80
+      volumes:
+        - /DATA/AppData/caddy/data/Caddyfile:/etc/caddy/Caddyfile
+        - /DATA/AppData/caddy/share:/usr/share/caddy
+      restart: unless-stopped
