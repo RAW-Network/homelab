@@ -10,4 +10,4 @@ services:
     command: -db /data/store.db
     volumes:
       - /DATA/Apdata/pico-share/data:/data
-    restart: unless-stoped
+    restart: unless-stopped
