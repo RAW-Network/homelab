@@ -15,3 +15,4 @@ services:
       - MINUTES_BETWEEN_VIDEO_SCANS=1
       - PUID=1000 
       - PGID=1000
+    restart: unless-stopped
