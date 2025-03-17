@@ -5,9 +5,9 @@ services:
     ports:
       - 8008:80
     volumes:
-      - /DATA/AppData/fireshare/fireshare_data:/data
-      - /DATA/AppData/fireshare/fireshare_processed:/processed
-      - /DATA/AppData/fireshare/fireshare_videos:/videos
+      - /DATA/AppData/fireshare/data:/data
+      - /DATA/AppData/fireshare/processed:/processed
+      - /DATA/AppData/fireshare/videos:/videos
     environment:
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=admin
