@@ -1,13 +1,9 @@
 services:
   gethomepage:
     container_name: homepage
-    image: ghcr.io/gethomepage/homepage:latest
+    image: gethomepage/homepage:v0.10.9
     ports:
       - 3002:3000
-    environment:
-      - HOMEPAGE_ALLOWED_HOSTS=yourdomain.com
-      - PUID=1000
-      - PGID=1000
     volumes:
       - /DATA/AppData/homepage/config:/app/config
       - /DATA/AppData/homepage/images:/app/public/images
