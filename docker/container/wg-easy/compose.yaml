@@ -12,7 +12,7 @@ services:
     image: ghcr.io/wg-easy/wg-easy
     container_name: wg-easy
     volumes:
-      - /DATA/AppData/wg-easy/etc_wireguard:/etc/wireguard
+      - /DATA/AppData/wg-easy/data:/etc/wireguard
     ports:
       - "51820:51820/udp"
       - "51821:51821/tcp"
