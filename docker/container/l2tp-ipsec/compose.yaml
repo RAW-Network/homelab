@@ -4,12 +4,11 @@ services:
         ports:
             - 1701:1701/udp
         container_name: l2tp-server
-        restart: always
+        restart: unless-stopped
         environment:
-            - VPN_IPSEC_PSK= #your_ipsec_psk 
             - VPN_USER= #l2tp_user
             - VPN_PASSWORD= #l2tp_pass
         volumes:
-            - /DATA/AppData/ipsec/ikev2-vpn-data:/etc/ipsec.d
+            - /DATA/AppData/l2tp-server/data:/etc/ipsec.d
             - /lib/modules:/lib/modules:ro
         image: gritsenko/l2tp_without_ipsec:latest
