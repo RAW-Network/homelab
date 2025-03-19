@@ -1,7 +1,6 @@
 services:
   routeros:
     container_name: routeros
-    network_mode: host
     image: evilfreelancer/docker-routeros:6.48.3
     restart: unless-stopped
     cap_add:
@@ -11,4 +10,3 @@ services:
     ports:
       - "8280:80" #HTTP
       - "8291:8291" #Winbox
-      - "1701:1701" #L2TP
