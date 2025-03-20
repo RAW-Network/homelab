@@ -13,6 +13,6 @@ services:
       - ADMIN_PASSWORD=admin
       - SECRET_KEY=fireclipsnetworkawhare
       - MINUTES_BETWEEN_VIDEO_SCANS=0
-      - PUID=1000 
+      - PUID=1000
       - PGID=1000
     restart: unless-stopped
