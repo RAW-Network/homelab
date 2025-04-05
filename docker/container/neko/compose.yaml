@@ -1,0 +1,20 @@
+services:
+  neko:
+    image: m1k1o/neko:chromium
+    restart: unless-stopped
+    container_name: neko
+    shm_size: 2gb
+    cap_add:
+      - SYS_ADMIN
+    environment:
+      NEKO_SCREEN: 1920x1080@30
+      NEKO_PASSWORD: Cute!Pass
+      NEKO_PASSWORD_ADMIN: Cute!Pass
+      NEKO_CONTROL_PROTECTION: true
+      NEKO_EPR: 52000-52100
+    volumes:
+      - neko:/home/neko/.config/chromium
+      - ./policies.json:/etc/chromium/policies/managed/policies.json
+
+volumes:
+  neko:
