@@ -17,4 +17,4 @@ services:
       - ./policies.json:/etc/chromium/policies/managed/policies.json
 
 volumes:
-  neko:
+  data:
