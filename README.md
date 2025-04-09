@@ -2,7 +2,7 @@
 
 👋 Selamat Datang di Kumpulan Docker Compose RAW-Network!
 
-Kumpulan Docker Compose dan konfigurasi yang siap pakai untuk mempermudah Anda dalam memulai project Docker. Dibuat khusus untuk pemula yang baru belajar Docker, dengan config yang sudah teruji dan mudah diardown.
+Kumpulan Docker Compose dan konfigurasi yang siap pakai untuk mempermudah Anda dalam memulai project Docker. Dibuat khusus untuk pemula yang baru belajar Docker, dengan config yang sudah teruji.
 
 ---
 
