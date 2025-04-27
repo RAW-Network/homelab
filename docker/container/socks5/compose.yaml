@@ -1,0 +1,9 @@
+services:
+  socks5:
+    image: serjs/go-socks5-proxy
+    container_name: socks5
+    environment:
+      - PROXY_PORT=25570
+    ports:
+      - 25570:25570
+    restart: unless-stopped
