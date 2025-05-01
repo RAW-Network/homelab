@@ -1,6 +1,6 @@
 services:
   socks5:
-    image: serjs/go-socks5-proxy
+    image: xkuma/socks5:latest
     container_name: socks5
     environment:
       - PROXY_PORT=25570
