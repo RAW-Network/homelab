@@ -1,6 +1,6 @@
 services:
   socks5:
-    image: xkuma/socks5:latest
+    image: justsky/socks5:latest
     container_name: socks5
     environment:
       - PROXY_PORT=25570
