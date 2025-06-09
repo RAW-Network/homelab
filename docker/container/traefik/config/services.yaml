@@ -1,0 +1,32 @@
+http:
+  routers:
+    proxmox:
+      rule: Host(`proxmox.mydomain.com`)
+      service: proxmox
+
+    mikrotik-router:
+      rule: Host(`mikrotik.mydomain.com`)
+      service: mikrotik
+      
+    adguard-home:
+      rule: (Host(`dns.mydomain.com`) && Path(`/dns-query`)
+      service: adguard-home
+      middlewares:
+        - ip-allowlist@file
+        - public-rate-limit@file
+        
+  services:
+    proxmox:
+      loadBalancer:
+        servers:
+          - url: http://192.168.100.5:8006
+
+    mikrotik:
+      loadBalancer:
+        servers:
+          - url: http://192.168.100.1:80
+          
+     adguard-home:
+      loadBalancer:
+        servers:
+          - url: http://192.168.100.2:3000

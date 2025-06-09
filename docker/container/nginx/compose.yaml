@@ -1,0 +1,9 @@
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - /DATA/AppData/nginx/data:/usr/share/nginx/html
+    restart: unless-stopped

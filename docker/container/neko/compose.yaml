@@ -1,0 +1,24 @@
+services:
+  neko:
+    image: ghcr.io/m1k1o/neko/chromium:latest
+    container_name: neko
+    restart: unless-stopped
+    shm_size: 2gb
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8080:8080
+      - 52000-52100:52000-52100/udp
+    environment:
+      - NEKO_DESKTOP_SCREEN=1280x720@30
+      - NEKO_MEMBER_MULTIUSER_USER_PASSWORD=neko
+      - NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD=admin
+      - NEKO_WEBRTC_EPR=52000-52100
+      - NEKO_SESSION_CONTROL_PROTECTION=true
+    volumes:
+      - data:/home/neko/.config/chromium
+      - ./policies.json:/etc/chromium/policies/managed/policies.json
+
+volumes:
+  data:
+    name: neko
