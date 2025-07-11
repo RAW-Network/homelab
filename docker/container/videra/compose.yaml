@@ -1,0 +1,17 @@
+services:
+  videra:
+    image: ghcr.io/raw-network/videra:latest
+    container_name: videra
+    ports:
+      - 3060:3000
+    devices:
+      - /dev/dri
+    volumes:
+      - /DATA/AppData/videra/compressed:/compressed
+      - /DATA/AppData/videra/uploads:/uploads
+      - /DATA/AppData/videra/logs:/logs
+    environment:
+      - MAX_VIDEO_UPLOAD_SIZE=1G
+      - FORCE_CPU_ENCODER=false
+      - TZ=Asia/Makassar
+    restart: unless-stopped

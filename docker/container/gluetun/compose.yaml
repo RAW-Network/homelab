@@ -1,0 +1,21 @@
+services:
+  gluetun:
+    container_name: gluetun
+    image: qmcgaw/gluetun:latest
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - TZ=UTC
+      - VPN_SERVICE_PROVIDER=custom
+      - VPN_TYPE=wireguard
+      - WIREGUARD_ENDPOINT_IP=
+      - WIREGUARD_ENDPOINT_PORT=
+      - WIREGUARD_PUBLIC_KEY=
+      - WIREGUARD_PRIVATE_KEY=
+      - WIREGUARD_ALLOWED_IPS=
+      - WIREGUARD_ADDRESSES=
+      - WIREGUARD_MTU=
+      - DNS_ADDRESS=
+    restart: unless-stopped
