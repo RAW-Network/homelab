@@ -5,6 +5,7 @@ services:
     ports:
       - 8081:8080
       - 6881:6881
+      - 6881:6881/udp
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,6 +14,6 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - /DATA/AppData/qbittorrent/config:/config
-      - /DATA/Downloads:/downloads
+      - /DATA/Media/downloads:/downloads
       - /DATA/AppData/qbittorrent/vuetorrent:/vuetorrent
     restart: unless-stopped
