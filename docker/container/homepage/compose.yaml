@@ -5,7 +5,7 @@ services:
     ports:
       - 3002:3000
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=yourdomain.com,192.168.x.x:3002
+      - HOMEPAGE_ALLOWED_HOSTS=*
     volumes:
       - /DATA/AppData/homepage/config:/app/config
       - /DATA/AppData/homepage/images:/app/public/images
