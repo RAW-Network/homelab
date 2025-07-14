@@ -1,9 +1,11 @@
 services:
   gethomepage:
     container_name: homepage
-    image: gethomepage/homepage:v0.10.9
+    image: gethomepage/homepage:latest
     ports:
       - 3002:3000
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=localhost:3002
     volumes:
       - /DATA/AppData/homepage/config:/app/config
       - /DATA/AppData/homepage/images:/app/public/images
