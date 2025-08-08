@@ -44,7 +44,3 @@ services:
 
 volumes:
   model-cache:
-networks:
-  default:
-    name: traefik
-    external: true
