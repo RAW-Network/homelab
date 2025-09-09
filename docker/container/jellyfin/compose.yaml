@@ -5,7 +5,7 @@ services:
     ports:
       - 8096:8096
     devices:
-      - /dev/dri:/dev/dri
+      - /dev/dri
     volumes:
       - /DATA/AppData/jellyfin/config:/config
       - /DATA/AppData/jellyfin/cache:/cache
