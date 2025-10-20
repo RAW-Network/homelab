@@ -1,0 +1,14 @@
+services:
+    l2tp-server:
+        privileged: true
+        image: gritsenko/l2tp_without_ipsec:latest
+        container_name: l2tp-server
+        ports:
+            - 1701:1701/udp
+        environment:
+            - VPN_USER=
+            - VPN_PASSWORD=
+        volumes:
+            - ./data:/etc/ipsec.d
+            - /lib/modules:/lib/modules:ro
+        restart: unless-stopped

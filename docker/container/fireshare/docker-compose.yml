@@ -1,0 +1,18 @@
+services:
+  fireshare:
+    container_name: fireshare
+    image: shaneisrael/fireshare:latest
+    ports:
+      - 8008:80
+    volumes:
+      - ./data:/data
+      - ./processed:/processed
+      - ./videos:/videos
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      - SECRET_KEY=ThisisVerySecretDontOpenThisfileBecauseIMWachingYou
+      - MINUTES_BETWEEN_VIDEO_SCANS=0
+      - PUID=1000
+      - PGID=1000
+    restart: unless-stopped

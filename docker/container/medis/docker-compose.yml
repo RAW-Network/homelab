@@ -1,0 +1,15 @@
+services:
+  medis:
+    image: ghcr.io/raw-network/medis:latest
+    container_name: medis
+    ports:
+      - 3073:3000
+    volumes:
+      - ./videos:/videos
+      - ./cookies:/cookies
+    environment:
+      - TZ=Asia/Makassar
+      - MAX_QUEUE_LIMIT=5
+      - AUTO_UPDATE_YTDLP=false
+      - PLAYLIST_DOWNLOAD_LIMIT=1
+    restart: unless-stopped

@@ -1,22 +1,33 @@
-# RAW-Network Docker Compose Collection
+# 🐳 RAW-Network Docker Compose Collection
 
-👋 Selamat Datang di Kumpulan Docker Compose RAW-Network!
+Welcome to **RAW-Network Docker Compose Collection**
+a curated set of ready-to-use Docker Compose configurations to help you quickly deploy and manage self-hosted services. 
 
-Kumpulan Docker Compose dan konfigurasi yang siap pakai untuk mempermudah Anda dalam memulai project Docker. Dibuat khusus untuk pemula yang baru belajar Docker, dengan config yang sudah teruji.
+Whether you're just starting with Docker or building a more advanced homelab, this collection is designed to make the process fast, simple, and reliable
 
 ---
 
 ## ✨ Features
 
-- **Siap Pakai**: Copy-paste dan jalankan, tanpa ribet pengaturan  
-- **Multi-Service**: Banyak service yang siap digunakan dalam satu command  
-- **Beginner Friendly**: Dibuat dengan bahasa yang simpel dan mudah dipahami  
-- **Bebas Customisasi**: Bisa diubah sesuai kebutuhan  
-- **Teruji**: Semua config telah dites dan stabil  
+- 🧰 **Plug & Play** — Minimal setup required, just clone and run
+- 🧭 **Multi-Service Ready** — Run multiple services with a single command
+- 🐣 **Beginner Friendly** — Simple and clear structure to help you learn
+- 🧠 **Customizable** — Easily modify each service to fit your needs
+- 🧪 **Tested & Stable** — All configurations are verified and production-ready
+
+---
+
+> 📝 **Note:** More services may be added over time!
 
 ---
 
 ## 🚀 Getting Started
 
-**Install Docker**  
-   Pastikan Docker sudah terinstall di mesin Anda. [Download Docker](https://www.docker.com/get-docker)
+### 1. Install Docker & Docker Compose
+Make sure Docker is installed on your system:  
+👉 [Download Docker](https://www.docker.com/get-docker)
+
+Verify installation:
+```bash
+docker -v
+docker compose version

@@ -1,0 +1,10 @@
+services:
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    command:
+      - --cleanup=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+services:
+  routeros:
+    container_name: routeros
+    image: safrinnetwork/ros7:latest
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    ports:
+      - 8291:8291
+    restart: unless-stopped

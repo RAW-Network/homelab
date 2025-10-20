@@ -1,9 +1,0 @@
-services:
-  ollama:
-    image: ollama/ollama
-    container_name: ollama
-    volumes:
-      - /DATA/AppData/ollama/data:/root/.ollama
-    ports:
-      - 11434:11434
-    restart: unless-stopped

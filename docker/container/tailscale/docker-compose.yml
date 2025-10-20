@@ -1,0 +1,13 @@
+services:
+  tailscale:
+    image: tailscale/tailscale:latest
+    hostname: homelab
+    container_name: tailscale
+    environment:
+      - TS_AUTHKEY=?ephemeral=false
+      - TS_ROUTES=192.168.1.0/24,192.168.100.0/24
+      - TS_EXTRA_ARGS=--advertise-exit-node --advertise-tags=tag:docker
+      - TS_STATE_DIR=/var/lib/tailscale
+    volumes:
+      - /DATA/AppData/tailscale/data:/var/lib/tailscale
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+services:
+  glances:
+    container_name: glances
+    image: nicolargo/glances:latest
+    ports:
+      - 61208:61208
+    environment:
+      - TZ=Asia/Makassar
+      - GLANCES_OPT=-w --disable-webui
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: unless-stopped
