@@ -2,7 +2,6 @@ services:
   flashpaper:
     image: ghcr.io/andrewpaglusch/flashpaper:latest
     container_name: flashpaper
-    restart: unless-stopped
     ports:
       - 9041:80
     environment:
@@ -24,3 +23,4 @@ services:
       - PRUNE_ENABLED=true
       - PRUNE_MIN_DAYS=30
       - PRUNE_MAX_DAYS=90
+    restart: unless-stopped

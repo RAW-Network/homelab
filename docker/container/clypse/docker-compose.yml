@@ -7,7 +7,9 @@ services:
     volumes:
       - ./data:/data
       - ./videos:/videos
+      - ./uploads:/uploads
     environment:
       - TZ=Asia/Makassar
-      - MAX_UPLOAD_SIZE=2G
+      - MAX_UPLOAD_SIZE=1G
+      - MAX_UPLOAD_COUNT=3
     restart: unless-stopped

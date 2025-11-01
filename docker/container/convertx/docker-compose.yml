@@ -2,7 +2,6 @@ services:
   convertx:
     image: ghcr.io/c4illin/convertx
     container_name: convertx
-    restart: unless-stopped
     ports:
       - 3303:3000
     environment:
@@ -14,3 +13,4 @@ services:
       - HIDE_HISTORY=true
     volumes:
       - ./data:/app/data
+    restart: unless-stopped
