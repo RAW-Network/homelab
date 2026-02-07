@@ -1,11 +1,9 @@
 services:
   filebrowser:
-    image: filebrowser/filebrowser:latest
+    image: filebrowser/filebrowser:v2.31.2
     container_name: filebrowser
     volumes:
       - /DATA:/srv
-      - ./database:/database
-      - ./config:/config
     ports:
       - 8095:80
     environment:
