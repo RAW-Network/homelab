@@ -1,7 +1,8 @@
 services:
   scrutiny:
     container_name: scrutiny
-    image: ghcr.io/analogj/scrutiny:master-omnibus
+    image: ghcr.io/analogj/scrutiny:latest
+    privileged: true
     cap_add:
       - SYS_RAWIO
     ports:
@@ -11,6 +12,6 @@ services:
       - ./config:/opt/scrutiny/config
       - ./influxdb:/opt/scrutiny/influxdb
     devices:
+      - /dev/nvme0n1
       - /dev/sda
-      - /dev/sdb
     restart: unless-stopped
