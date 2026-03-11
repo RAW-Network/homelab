@@ -1,12 +1,11 @@
 services:
   filebrowser:
-    image: filebrowser/filebrowser:v2.31.2
+    image: filebrowser/filebrowser:latest
     container_name: filebrowser
     volumes:
       - /DATA:/srv
+      - ./config:/config
+      - ./database:/database
     ports:
       - 8095:80
-    environment:
-      - PUID=1000
-      - PGID=1000
     restart: unless-stopped
