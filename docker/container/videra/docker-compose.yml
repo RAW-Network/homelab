@@ -11,7 +11,7 @@ services:
       - ./uploads:/uploads
       - ./logs:/logs
     environment:
-      - MAX_VIDEO_UPLOAD_SIZE=1G
-      - FORCE_CPU_ENCODER=false
+      - GPU=true
+      - MAX_VIDEO_UPLOAD_SIZE=500M
       - TZ=Asia/Makassar
     restart: unless-stopped
