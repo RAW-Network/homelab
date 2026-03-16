@@ -1,7 +1,7 @@
 services:
   watchtower:
     container_name: watchtower
-    image: containrrr/watchtower
+    image: nickfedor/watchtower:latest
     command:
       - --cleanup=true
     volumes:
