@@ -1,11 +1,24 @@
 services:
   beszel-agent:
-    image: henrygd/beszel-agent
+    image: henrygd/beszel-agent-intel
     container_name: beszel-agent
     restart: unless-stopped
     network_mode: host
+    cap_add:
+      - SYS_RAWIO
+      - SYS_ADMIN
+      - CAP_PERFMON
+    devices:
+      - /dev/sda:/dev/sda
+      - /dev/nvme0:/dev/nvme0
+      - /dev/dri/card0:/dev/dri/card0
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./beszel_agent_data:/var/lib/beszel-agent
+      # monitor other disks / partitions by mounting a folder in /extra-filesystems
+      # - /mnt/disk/.beszel:/extra-filesystems/sda1__Storage-Name:ro
     environment:
-      PORT: 45876
-      KEY: 
+      LISTEN=
+      KEY=
+      TOKEN=
+      HUB_URL=
