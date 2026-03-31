@@ -18,7 +18,7 @@ services:
       # monitor other disks / partitions by mounting a folder in /extra-filesystems
       # - /mnt/disk/.beszel:/extra-filesystems/sda__Storage-Name:ro
     environment:
-      LISTEN=
-      KEY=
-      TOKEN=
-      HUB_URL=
+      - LISTEN=
+      - KEY=
+      - TOKEN=
+      - HUB_URL=
