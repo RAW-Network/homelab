@@ -1,0 +1,10 @@
+services:
+  beatdock:
+    image: ghcr.io/lazaroagomez/beatdock:latest
+    container_name: beatdock
+    environment:
+      - TOKEN=
+      - LAVALINK_HOST=
+      - LAVALINK_PORT=
+      - LAVALINK_PASSWORD=
+    restart: unless-stopped
