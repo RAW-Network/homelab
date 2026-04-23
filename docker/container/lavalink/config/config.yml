@@ -1,0 +1,41 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+
+plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - MUSIC
+      - WEB
+      - ANDROID_VR
+
+lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.16.0"
+      snapshot: false
+  server:
+    password: "YourSuperSecretPassword"
+    sources:
+      youtube: false
+      soundcloud: true
+      bandcamp: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+    bufferDurationMs: 200
+    frameBufferDurationMs: 1000
+    youtubePlaylistLoadLimit: 3
+    playerUpdateInterval: 2
+    trackStuckThresholdMs: 5000
+    useSeekGhosting: true
+    youtubeSearchEnabled: true
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO
