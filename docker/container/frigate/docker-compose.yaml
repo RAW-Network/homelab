@@ -1,0 +1,22 @@
+services:
+  frigate:
+    image: ghcr.io/blakeblackshear/frigate:stable
+    container_name: frigate
+    shm_size: 256mb
+    cap_add:
+      - CAP_PERFMON
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./config:/config
+      - ./storage:/media/frigate
+      - type: tmpfs
+        target: /tmp/cache
+        tmpfs:
+          size: 100000000
+    ports:
+      - 8971:8971
+      - 8554:8554
+      - 8555:8555
+    restart: unless-stopped
