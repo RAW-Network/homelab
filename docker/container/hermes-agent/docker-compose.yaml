@@ -5,6 +5,8 @@ services:
     command: gateway run
     environment:
       - TZ=Asia/Makassar
+    ports:
+      - 8642:8642
     volumes:
       - ./data:/opt/data
     extra_hosts:
