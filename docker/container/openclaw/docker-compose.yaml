@@ -1,0 +1,12 @@
+services:
+  openclaw:
+    image: ghcr.io/openclaw/openclaw:latest
+    container_name: openclaw
+    environment:
+      - TZ=Asia/Makassar
+      - OPENCLAW_GATEWAY_PASSWORD=ThisisVerySecretDontOpenThisfileBecauseIMWachingYou
+    volumes:
+      - ./data:/home/node
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
