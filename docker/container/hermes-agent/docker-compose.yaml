@@ -1,0 +1,12 @@
+services:
+  hermes-agent:
+    image: nousresearch/hermes-agent:latest
+    container_name: hermes-agent
+    command: gateway run
+    environment:
+      - TZ=Asia/Makassar
+    volumes:
+      - ./data:/opt/data
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
