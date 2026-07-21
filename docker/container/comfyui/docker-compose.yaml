@@ -1,0 +1,19 @@
+services:
+  comfyui:
+    image: yanwk/comfyui-boot:cpu
+    container_name: comfyui
+    ports:
+      - 8188:8188
+    volumes:
+      - ./data/cache:/root/.cache
+      - ./data/config:/root/.config
+      - ./data/local:/root/.local
+      - ./data/custom_nodes:/root/ComfyUI/custom_nodes
+      - ./data/models:/root/ComfyUI/models
+      - ./data/huggingface:/root/.cache/huggingface/hub
+      - ./data/torch:/root/.cache/torch/hub
+      - ./data/input:/root/ComfyUI/input
+      - ./data/output:/root/ComfyUI/output
+      - ./data/user:/root/ComfyUI/user
+      - ./data/scripts:/root/user-scripts
+    restart: unless-stopped
