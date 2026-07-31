@@ -1,33 +1,74 @@
-# 🐳 RAW-Network Docker Compose Collection
+# Homelab
 
-Welcome to **RAW-Network Docker Compose Collection**
-a curated set of ready-to-use Docker Compose configurations to help you quickly deploy and manage self-hosted services. 
-
-Whether you're just starting with Docker or building a more advanced homelab, this collection is designed to make the process fast, simple, and reliable
+Docker Compose collection and stack management tool for self-hosted services.
 
 ---
 
-## ✨ Features
+## Getting Started
 
-- 🧰 **Plug & Play** — Minimal setup required, just clone and run
-- 🧭 **Multi-Service Ready** — Run multiple services with a single command
-- 🐣 **Beginner Friendly** — Simple and clear structure to help you learn
-- 🧠 **Customizable** — Easily modify each service to fit your needs
-- 🧪 **Tested & Stable** — All configurations are verified and production-ready
+### Prerequisites
 
----
+- Docker Engine
+- Docker Compose v2+
 
-> 📝 **Note:** More services may be added over time!
+### Deploy a Single Service
 
----
-
-## 🚀 Getting Started
-
-### 1. Install Docker & Docker Compose
-Make sure Docker is installed on your system:  
-👉 [Download Docker](https://www.docker.com/get-docker)
-
-Verify installation:
 ```bash
-docker -v
-docker compose version
+git clone https://github.com/RAW-Network/homelab.git
+cd homelab/docker/container/portainer
+docker compose up -d
+```
+
+---
+
+## stackctl
+
+Lightweight Bash tool to deploy, update, and stop multiple stacks from an interactive menu.
+
+### Run Once
+
+```bash
+curl -sSL https://raw.githubusercontent.com/RAW-Network/homelab/main/stackctl.sh | bash
+```
+
+### Run from Repository
+
+```bash
+chmod +x stackctl.sh
+./stackctl.sh
+```
+
+### Install System-Wide
+
+```bash
+curl -sSL https://raw.githubusercontent.com/RAW-Network/homelab/main/stackctl.sh -o ./stackctl.sh
+chmod +x ./stackctl.sh
+ln -s $(pwd)/stackctl.sh /usr/local/bin/stackctl
+```
+
+```bash
+stackctl
+```
+
+To uninstall:
+
+```bash
+rm /usr/local/bin/stackctl
+```
+
+### Usage
+
+```
+1) DEPLOY STACK
+2) UPDATE STACK
+3) STOP STACK
+4) EXIT
+```
+
+Selection supports `0` (all), comma-separated indices (`1,5,12`), or keywords (`portainer,jellyfin`).
+
+---
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
