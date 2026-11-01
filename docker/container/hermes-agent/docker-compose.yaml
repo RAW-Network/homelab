@@ -5,8 +5,9 @@ services:
     command: gateway run
     environment:
       - TZ=Asia/Makassar
+      - HERMES_DASHBOARD=true
     ports:
-      - 8642:8642
+      - 9119:9119
     volumes:
       - ./data:/opt/data
     extra_hosts:
